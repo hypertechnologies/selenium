@@ -1,4 +1,4 @@
-package org.cucumber.stepDefinitions;
+package stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -7,12 +7,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class VehicleSearch {
-    WebDriver driver;
-
+public class VehicleSearch  extends Base {
     @Given("I navigate to google.com")
     public void navigate(){
         WebDriverManager.getInstance(DriverManagerType.CHROME).setup();

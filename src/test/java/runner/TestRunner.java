@@ -1,5 +1,4 @@
-package org.cucumber;
-
+package runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
