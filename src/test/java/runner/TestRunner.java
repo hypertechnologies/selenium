@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "html:src/test/resources/reports/htmlReport/cucumber-html-report.html",
                 "json:src/test/resources/reports/htmlReport/cucumber-json-report.json"
         },
-        features= "src/test/resources/features",
+        features=        "src/test/resources/features",
         glue={"stepDefinitions"}
 )
 

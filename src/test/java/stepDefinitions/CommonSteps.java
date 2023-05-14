@@ -19,7 +19,7 @@ public class CommonSteps extends Base {
         option.setPageLoadStrategy(PageLoadStrategy.NONE);
 
         driver = new ChromeDriver(option);
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(implicitWaitTime));
 
         driver.get(url);
     }
