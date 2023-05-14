@@ -16,7 +16,7 @@ public class CommonSteps extends Base {
         WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
 
         ChromeOptions option=new ChromeOptions();
-        option.setPageLoadStrategy(PageLoadStrategy.NONE);
+//        option.setPageLoadStrategy(PageLoadStrategy.NONE);
 
         driver = new ChromeDriver(option);
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(implicitWaitTime));
