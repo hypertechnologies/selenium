@@ -1,4 +1,4 @@
-package org.cucumber.stepDefinitions;
+package stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,16 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class VehicleSearch {
-    WebDriver driver;
-
-    @Given("I navigate to google.com")
-    public void navigate(){
-        WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
-        driver = new ChromeDriver();
-        driver.get("https://www.google.com");
-    }
-
+public class VehicleSearch extends Base{
     @When("I search for {string}")
     public void iSearchFor(String searchTerm) {
         driver.findElement(By.name("q")).sendKeys(searchTerm);
@@ -31,7 +22,5 @@ public class VehicleSearch {
         boolean isDisplayed = driver.findElement(By.cssSelector("#result-stats")).isDisplayed();
 
         Assert.assertTrue(isDisplayed);
-
-
     }
 }
